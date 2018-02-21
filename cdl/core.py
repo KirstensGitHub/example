@@ -41,9 +41,8 @@ class chatter:
     def add_valence(phrase, mood):
         """
         input:
-            + str - mood ('+', '-')
+            + str - valence ('+', '-')
             + NOTE : can use output from lab_chatter
-
         output:
             + string appended with mood-appropriate phrase
         """
@@ -56,7 +55,18 @@ class chatter:
         return(mood_phrase)
 
 class convo:
+    """
+    generates a random CDL conversation
+    """
+
     def make(gender1, gender2, valence1, valence2):
+        """
+        input:
+        + gender1: str - gender of lab member ('m'/'f')
+        + gender2: str - gender of lab member ('m'/'f')
+        + valence1: str - ('+', '-')
+        + valence2: str - ('+', '-')
+        """
         sentence1 = chatter.add_valence(chatter.make(gender1), valence1)
         sentence2 = chatter.add_valence(chatter.make(gender2), valence2)
 
@@ -65,17 +75,29 @@ class convo:
         return(conversation)
 
 class other:
+    """
+    This class returns random lab phrases about various topics
+    """
     def food():
+        """
+        output: random food phrase
+        """
         return(random.choice(['hungry for Zahav cauliflower',
                               'who\'s on milk this week?',
                               'Weirdo Lady is selling delicious soup']))
 
     def furniture():
+        """
+        output: random furniture phrase
+        """
         return(random.choice(['you may fall off the stool and die',
                               'how many lamps can we fit in the reading nook?',
                               'Party Parrot Pillow Alliteration!']))
 
     def travel():
+        """
+        output: random travel phrase
+        """
         return(random.choice(['I hear that if you fly out of Lebanon, you will die',
                               'Dartmouth Coach at 6am unless I oversleep and miss it..',
                               'I\'m going to start ice skating into work',

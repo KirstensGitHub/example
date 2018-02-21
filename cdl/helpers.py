@@ -1,4 +1,7 @@
 def first_phrase(name):
+    """
+    generates phrase based on specified lab member
+    """
     if name == 'gina':
         return('I just re-listened to my spotify playist; ')
     if name == 'lucy':
