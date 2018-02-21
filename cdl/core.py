@@ -64,7 +64,7 @@ class convo:
 
         return(conversation)
 
-class random:
+class other:
     def food():
         return(random.choice(['hungry for Zahav cauliflower',
                               'who\'s on milk this week?',
