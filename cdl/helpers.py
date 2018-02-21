@@ -1,6 +1,17 @@
 def first_phrase(name):
     """
-    generates phrase based on specified lab member
+        returns phrase, given lab member
+
+        Parameters
+        ----------
+        name : str
+            lab member
+
+        Returns
+        ----------
+        utterance : string
+            phrase simulating specific lab member
+
     """
     if name == 'gina':
         return('I just re-listened to my spotify playist; ')

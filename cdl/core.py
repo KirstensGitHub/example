@@ -2,15 +2,28 @@ import random
 from .helpers import first_phrase
 
 class chatter:
+    """
+    This class is used to generate lab chatter and conversations
+    """
     def make(gender, category=None):
-        """
-        input:
-            + gender: str - gender of lab member ('m'/'f')
-            + category (optional): str - type of lab member ('post_doc', 'student', 'PI')
 
-        output:
-            + str - phrase simulating CDL lab chit chat
-        """
+    """
+        generates chatter from a lab member meeting the specified parameters
+
+        Parameters
+        ----------
+        gender : str
+            gender of lab member ('m'/'f')
+
+        category : str
+            type of lab member ('post_doc', 'student', 'PI')
+
+        Returns
+        ----------
+        utterance : string
+            phrase simulating cdl chit chat
+
+    """
 
         males = ['jeremy', 'andy', 'paxton']
         females = ['lucy', 'gina', 'kirsten', 'emily']
@@ -40,11 +53,20 @@ class chatter:
 
     def add_valence(phrase, mood):
         """
-        input:
-            + str - valence ('+', '-')
-            + NOTE : can use output from lab_chatter
-        output:
-            + string appended with mood-appropriate phrase
+            adds valence to inputted utterance
+
+            Parameters
+            ----------
+            phrase : str
+                any desired string, can be passed from chatter.make()
+
+                mood : str
+                    desired valence ('+', '-')
+
+            Returns
+            ----------
+            mood_phrase : string
+                phrase with valence clause
         """
 
         if mood == '+':
@@ -55,10 +77,6 @@ class chatter:
         return(mood_phrase)
 
 class convo:
-    """
-    generates a random CDL conversation
-    """
-
     def make(gender1, gender2, valence1, valence2):
         """
         input:
@@ -76,11 +94,20 @@ class convo:
 
 class other:
     """
-    This class returns random lab phrases about various topics
+    This class is designed to return random lab phrases about various topics
     """
     def food():
         """
-        output: random food phrase
+            returns random food phrase
+
+            Parameters
+            ----------
+
+
+            Returns
+            ----------
+            food_phrase : string
+                string about food
         """
         return(random.choice(['hungry for Zahav cauliflower',
                               'who\'s on milk this week?',
@@ -88,7 +115,16 @@ class other:
 
     def furniture():
         """
-        output: random furniture phrase
+            returns random food phrase
+
+            Parameters
+            ----------
+
+
+            Returns
+            ----------
+            furniture_phrase : string
+                string about furniture
         """
         return(random.choice(['you may fall off the stool and die',
                               'how many lamps can we fit in the reading nook?',
@@ -96,7 +132,15 @@ class other:
 
     def travel():
         """
-        output: random travel phrase
+            returns random travel phrase
+
+            Parameters
+            ----------
+
+            Returns
+            ----------
+            travel_phrase : string
+                string about travel
         """
         return(random.choice(['I hear that if you fly out of Lebanon, you will die',
                               'Dartmouth Coach at 6am unless I oversleep and miss it..',
