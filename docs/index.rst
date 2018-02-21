@@ -9,9 +9,10 @@ Welcome to cdl's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
-
+   core
+   helpers
 
 Indices and tables
 ==================
